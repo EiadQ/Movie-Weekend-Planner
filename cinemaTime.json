@@ -1,0 +1,40 @@
+{
+    "id": 3,
+    "name": "Cinema Time",
+    "minOrder": 3.99,
+    "serviceFee": 1.79,
+    "genres": {
+        "Romance": [
+            { "id": 50, "title": "Paper Stars", "description": "Two authors fall in love while co-writing a book.", "price": 3.99, "year": 2023 },
+            { "id": 51, "title": "Digital Hearts", "description": "A VR romance becomes all too real.", "price": 4.79, "year": 2025 },
+            { "id": 52, "title": "The Lighthouse Promise", "description": "A love rekindled by letters found in a lighthouse.", "price": 4.49, "year": 2024 },
+            { "id": 53, "title": "Sweet Distraction", "description": "A baker and a lawyer’s worlds collide over cupcakes.", "price": 3.49, "year": 2023 },
+            { "id": 54, "title": "Orbit of You", "description": "Two scientists fall in love while building a satellite.", "price": 4.99, "year": 2025 }
+        ],
+        "Comedy": [
+            { "id": 55, "title": "Chef’s Disaster", "description": "A cooking show goes viral for all the wrong reasons.", "price": 3.49, "year": 2023 },
+            { "id": 56, "title": "Going Corporate", "description": "A musician accidentally becomes a financial analyst.", "price": 4.29, "year": 2024 },
+            { "id": 57, "title": "Mall Madness", "description": "Black Friday turns into a wild adventure for two friends.", "price": 3.79, "year": 2023 },
+            { "id": 58, "title": "Retirement Roadtrip", "description": "Three retirees take one last joyride across the country.", "price": 4.49, "year": 2025 },
+            { "id": 59, "title": "Pet Project", "description": "A group of zookeepers start a dating app for pet owners.", "price": 4.79, "year": 2025 },
+            { "id": 60, "title": "Podcast Wars", "description": "Two rival hosts accidentally collaborate on a hit show.", "price": 3.99, "year": 2024 }
+        ],
+        "Action": [
+            { "id": 61, "title": "Delta Strike", "description": "A special ops team is framed for an international incident.", "price": 5.29, "year": 2025 },
+            { "id": 62, "title": "Railgun", "description": "A stolen weapon prototype ignites global conflict.", "price": 4.99, "year": 2024 },
+            { "id": 63, "title": "Crimson Tide", "description": "A submarine crew must decide who to trust in deep waters.", "price": 4.29, "year": 2023 },
+            { "id": 64, "title": "Shadow Protocol", "description": "A spy is forced to protect the criminal he once hunted.", "price": 4.99, "year": 2024 },
+            { "id": 65, "title": "Nightfall", "description": "A mercenary discovers the war he’s fighting doesn’t exist.", "price": 5.49, "year": 2025 },
+            { "id": 66, "title": "High Impact", "description": "An ex-athlete uses his skills to take down a cartel.", "price": 3.99, "year": 2023 }
+        ],
+        "SciFi": [
+            { "id": 67, "title": "Deep Signal", "description": "Divers uncover an alien structure beneath the ocean.", "price": 4.79, "year": 2024 },
+            { "id": 68, "title": "Echo Grid", "description": "Reality fractures after a failed teleportation experiment.", "price": 5.29, "year": 2025 },
+            { "id": 69, "title": "Zero Matter", "description": "A scientist unlocks a new element that defies physics.", "price": 4.49, "year": 2023 },
+            { "id": 70, "title": "Red Shift", "description": "A space captain relives the same day across galaxies.", "price": 4.99, "year": 2024 },
+            { "id": 71, "title": "The Synthetic Horizon", "description": "Human clones begin remembering other lives.", "price": 5.49, "year": 2025 },
+            { "id": 72, "title": "Project Paradox", "description": "A time experiment threatens to erase the inventor’s timeline.", "price": 4.99, "year": 2024 }
+        ]
+    }
+}
+

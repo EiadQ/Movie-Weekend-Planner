@@ -1,0 +1,229 @@
+/* General Page Style */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1c1c;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Margins */
+h2, h3 {
+    margin-top: 0;
+}
+
+/* Container for consistent horizontal spacing */
+.container {
+    width: 100%;
+    max-width: 1200px;  /* Constrain max width */
+    margin: 0 auto;
+    padding: 20px;      /* Horizontal spacing from window edges */
+}
+
+/* Top Row Card Styles (Service Info & Add Movie) */
+.top-cards .cards-row {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;  /* Ensure same height */
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.service-card {
+    flex: 1;             /* 1 part of total */
+    max-width: 30%;      /* Roughly 1/4 */
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.service-card:hover {
+    background-color: #2c2c2c; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5); 
+    transform: none; /* Cancel any scale/translate effect */
+}
+
+.add-movie-card {
+    flex: 3;             /* 3 parts of total */
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+/* Make text fields same height and font-size as the genre dropdown */
+.add-movie-card input[type="text"],
+.add-movie-card input[type="number"],
+.add-movie-card input[type="year"],
+.add-movie-card select {
+    font-size: 18px; 
+    padding: 5px 10px; 
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1c1c1c;
+    color: #f5f5f5;
+}
+
+/* Service Info card inputs same size as genre dropdown */
+.service-card input[type="text"],
+.service-card input[type="number"] {
+    font-size: 18px; 
+    padding: 5px 10px;
+    height: 40px; 
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1c1c1c;
+    color: #f5f5f5;
+}
+
+.service-card .form-row {
+    display: flex;
+    flex-wrap: nowrap;       /* keep label and input on same line */
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.service-card .form-row label {
+    flex: 0 0 120px;         /* fixed label width */
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.service-card .form-row input {
+    flex: 1 1 auto;          /* input can shrink and grow */
+    min-width: 0;            /* allows shrinking below content width */
+    max-width: 100%;         /* never exceed card width */
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1c1c1c;
+    color: #f5f5f5;
+    font-size: 18px;
+    height: 40px;
+    box-sizing: border-box;  /* include padding in width */
+}
+
+/* Form Rows inside Cards */
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.form-row label {
+    flex: 0 0 120px;   /* fixed label width */
+    margin-right: 10px;
+    font-weight: bold;
+}
+.form-row input, 
+.form-row select {
+    flex: 1;
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #1c1c1c;
+    color: #f5f5f5;
+}
+
+/* Styles for all buttons */
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffcc00;
+    color: #1c1c1c;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+button:hover {
+    background-color: #e6b800;
+}
+
+/* Movies Table Styling */
+.movies-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    table-layout: fixed; /* Ensures consistent column widths */
+}
+.movies-list th, .movies-list td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: left;
+    overflow: hidden;        /* Prevents text from overflowing */
+    text-overflow: ellipsis; /* Shows ... for long text */
+    white-space: nowrap;     /* Prevents wrapping */
+}
+.movies-list th {
+    background-color: #333;
+    color: #ffcc00;
+}
+.movies-list td {
+    background-color: #2c2c2c;
+    color: #f5f5f5;
+}
+.movies-list tr:hover td {
+    background-color: #3a3a3a;
+}
+/* Fix Relative Column widths */
+.movies-list th:nth-child(1),
+.movies-list td:nth-child(1) { width: 3%; }  /* ID */
+.movies-list th:nth-child(2),
+.movies-list td:nth-child(2) { width: 20%; } /* Title */
+.movies-list th:nth-child(3),
+.movies-list td:nth-child(3) { width: 60%; } /* Description */
+.movies-list th:nth-child(4),
+.movies-list td:nth-child(4) { width: 5%; }  /* Year */
+.movies-list th:nth-child(5),
+.movies-list td:nth-child(5) { width: 5%; }  /* Price */
+.movies-list th:nth-child(6),
+.movies-list td:nth-child(6) { width: 7%; }  /* Remove */
+
+
+
+
+/* Special Form Styling for Add Genre inside Add Movie Card */
+#genreSelect {
+    width: 20%;
+    margin-right: 10px;
+}
+#newGenre {
+    margin-left: 10px;
+    flex: 1;
+}
+
+/* Styles for the remove icon in service list and movie table */
+.movies-list .remove-service-icon .remove-icon {
+    width: 20px;          /* Small icon */
+    height: 20px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;       /* Center in the table cell */
+    transition: transform 0.2s;
+}
+.movies-list .remove-service-icon .remove-icon:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+}
+
+/* Styles for the services.pug page */
+.services-card th:nth-child(1),
+.services-card td:nth-child(1) { width: 93%; }  /* Service name */
+.services-card th:nth-child(2),
+.services-card td:nth-child(2) { width: 7%; }  /* Remove icon */
+
+/* Add Service input field beside button */
+#newServiceName {
+    flex: 0 0 250px;
+    padding: 8px;                
+    font-size: 16px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1c1c1c;
+    color: #f5f5f5;
+}

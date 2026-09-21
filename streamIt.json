@@ -1,0 +1,45 @@
+{
+    "id": 1,
+    "name": "Stream It",
+    "minOrder": 5.98,
+    "serviceFee": 1.49,
+    "genres": {
+        "Romance": [
+            { "id": 1, "title": "Love on Schedule", "description": "Two commuters fall in love after missing the same train.", "price": 3.49, "year": 2023 },
+            { "id": 2, "title": "Summer in Bloom", "description": "A gardener and an architect rebuild a park and their hearts.", "price": 3.99, "year": 2024 },
+            { "id": 3, "title": "Café Melancholy", "description": "A writer finds inspiration and romance at a seaside café.", "price": 4.49, "year": 2025 },
+            { "id": 4, "title": "Parallel Hearts", "description": "Two strangers dream about each other every night.", "price": 4.79, "year": 2025 },
+            { "id": 5, "title": "The Reunion List", "description": "Old classmates reconnect at a ten-year reunion.", "price": 3.29, "year": 2023 }
+        ],
+        "Drama": [
+            { "id": 6, "title": "Fading Echoes", "description": "A retired musician rediscovers his passion through teaching.", "price": 3.49, "year": 2023 },
+            { "id": 7, "title": "Winter’s End", "description": "A family confronts long-buried secrets during a snowstorm.", "price": 4.49, "year": 2024 },
+            { "id": 8, "title": "The Last Testament", "description": "A lawyer finds his late father’s journal and learns the truth.", "price": 4.99, "year": 2025 },
+            { "id": 9, "title": "Letters to Nowhere", "description": "A postman delivers messages that change lives.", "price": 3.99, "year": 2023 },
+            { "id": 10, "title": "The Stillness", "description": "A photographer returns to his hometown after decades away.", "price": 4.29, "year": 2024 }
+        ],
+        "Comedy": [
+            { "id": 11, "title": "Laugh Track", "description": "A stand-up comedian’s life spirals into chaos before his big break.", "price": 3.49, "year": 2023 },
+            { "id": 12, "title": "Office Chaos", "description": "When the boss goes missing, the interns take over.", "price": 3.99, "year": 2024 },
+            { "id": 13, "title": "Roommate Roulette", "description": "Five strangers, one apartment, zero compatibility.", "price": 2.99, "year": 2023 },
+            { "id": 14, "title": "Vacation Miscalculation", "description": "A family trip turns into an accidental corporate takeover.", "price": 4.49, "year": 2025 },
+            { "id": 15, "title": "The Laughing Plan", "description": "An undercover detective must pose as a clown.", "price": 3.79, "year": 2024 },
+            { "id": 16, "title": "Punchline Paradise", "description": "A comedy club feud escalates to national television.", "price": 4.99, "year": 2025 }
+        ],
+        "Action": [
+            { "id": 17, "title": "Red Horizon", "description": "Elite pilots race against time to stop an orbital threat.", "price": 5.49, "year": 2025 },
+            { "id": 18, "title": "Steel Division", "description": "Mercenaries must protect a scientist with dangerous knowledge.", "price": 4.99, "year": 2024 },
+            { "id": 19, "title": "Urban Heat", "description": "Cops, robbers, and a ticking bomb in downtown Miami.", "price": 3.99, "year": 2023 },
+            { "id": 20, "title": "Vortex Run", "description": "Street racers uncover a conspiracy behind an energy project.", "price": 5.29, "year": 2025 },
+            { "id": 21, "title": "Zero Protocol", "description": "A rogue agent breaks into his own agency to save the world.", "price": 4.49, "year": 2024 },
+            { "id": 22, "title": "Afterburn", "description": "An ex-firefighter becomes a reluctant hero during a city blackout.", "price": 3.99, "year": 2023 }
+        ],
+        "SciFi": [
+            { "id": 23, "title": "Nebula Drift", "description": "A stranded crew discovers life on a forgotten planet.", "price": 5.49, "year": 2025 },
+            { "id": 24, "title": "Quantum Divide", "description": "A physicist risks everything to reverse a temporal collapse.", "price": 4.99, "year": 2024 },
+            { "id": 25, "title": "Ecliptic Dawn", "description": "An astronaut’s final transmission holds a secret.", "price": 4.49, "year": 2023 },
+            { "id": 26, "title": "The Core Directive", "description": "AI soldiers begin to question their orders.", "price": 5.29, "year": 2025 },
+            { "id": 27, "title": "Astera", "description": "Humanity’s last city orbits a dying star.", "price": 4.79, "year": 2024 }
+        ]
+    }
+}

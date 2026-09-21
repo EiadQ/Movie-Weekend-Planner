@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Streaming Service Statistics
+        link(rel="stylesheet", href="/styles/styles.css")
+    body
+        include header.pug
+
+        .stats-container
+            h2 Individual Streaming Service Statistics
+
+            table
+                thead
+                    tr
+                        th Service Name
+                        th Total Movies Ordered
+                        th Total Sales Revenue
+                        th Average Order Cost
+                        th Most Frequently Ordered Movie
+                        
+                tbody
+                    each service in statsData
+                        tr
+                            td= service.name
+                            td= service.totalOrdered
+                            td= '$' + service.totalSales.toFixed(2)
+                            td= '$' + service.avgCost.toFixed(2)
+                            td= service.mostPopular
+
+            // Optional message below table
+            if statsData.length === 0
+                p No statistics available yet.

@@ -1,0 +1,17 @@
+header
+    h1
+        img(src='/images/popcornLeft.png', width=50, alt='Popcorn Logo')
+        |  "Movie Weekend" Planner 
+        img(src='/images/popcornRight.png', width=50, alt='Popcorn Logo')
+    nav
+        a(class=currentPath === '/' ? 'active' : '', href='/') Home
+        if !user
+            a(class=(currentPath === '/login' || currentPath === '/register') ? 'active' : '', href='/login') Login
+        else
+            a(class=currentPath === '/order' ? 'active' : '', href='/order') Order Form
+            a(class=currentPath === '/stats' ? 'active' : '', href='/stats') Statistics
+            if user.admin
+                a(class=currentPath === '/users' ? 'active' : '', href='/users') Users
+                a(class=currentPath === '/services' ? 'active' : '', href='/services') Services
+            a(class=(currentPath.startsWith('/users/') && currentPath !== '/users') ? 'active' : '', href=`/users/${user._id}`) Profile
+            a(href='/logout') Logout

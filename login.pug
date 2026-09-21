@@ -1,0 +1,21 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title Login
+        link(rel='stylesheet', href='/styles/styles.css')
+    body
+        include header.pug
+        main.auth-container
+            section.auth-card
+                h2 Sign In
+                if errorMessage
+                    p.form-error= errorMessage
+                form(method='post', action='/login')
+                    label(for='username') Username
+                    input#username(type='text', name='username', required)
+                    label(for='password') Password
+                    input#password(type='password', name='password', required)
+                    button(type='submit') Sign In
+                p.helper-text Need an account?
+                    a(href='/register') Register here

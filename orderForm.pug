@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Movie Weekend Planner - Order Form
+        link(rel="stylesheet", href="/styles/styles.css")
+        script.
+            const basicServiceData = !{JSON.stringify(basicServiceData)};
+    body
+        include header.pug
+
+        main
+            .centered 
+                label(for="serviceSelect") Select Streaming Service:&nbsp
+            .centered 
+                select#serviceSelect
+                    option(value="") -- Select a Service --
+                    each service in basicServiceData
+                        option(value=service.id)= service.name
+
+            .service-info
+                p#minOrder
+                p#serviceFee
+
+            nav.genres-top
+                ul#genreList
+
+            .columns
+                section.movies-column#moviesColumn
+                    h3#movieList Movies
+                    #moviesContainer
+
+                aside.order-column
+                    h3 Current Order
+                    ul#orderList
+                    .order-totals
+                        p#totalFees
+                        p#subtotal
+                        p#tax
+                        p#total
+                        p#minOrderMsg.minOrderMsg
+                        button#submitOrder.hidden Place Order
+
+            script(src="/scripts/interact.js")

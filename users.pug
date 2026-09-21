@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title Users
+        link(rel='stylesheet', href='/styles/styles.css')
+        link(rel='stylesheet', href='/styles/editStyles.css')
+        script(src='/scripts/users.js', defer)
+    body
+        include header.pug
+        main.container
+            section.services-card.movies-list
+                h2 Registered Users
+                table
+                    thead
+                        tr
+                            th Username
+                            th Remove
+                    tbody
+                        each listedUser in users
+                            tr(class=listedUser.privacy ? 'private-row' : '')
+                                td
+                                    if listedUser.privacy
+                                        span.user-name.private-user(title='Private user')= listedUser.username
+                                    else
+                                        .service-card
+                                            a(href=`/users/${listedUser.id}`)= listedUser.username
+                                td
+                                    img.remove-user-icon(src='/images/remove.svg', alt='Remove', width='24', height='24', data-id=listedUser.id, title='Remove this user')

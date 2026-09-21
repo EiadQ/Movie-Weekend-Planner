@@ -1,0 +1,39 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title Streaming Services
+        link(rel="stylesheet", href="/styles/styles.css")
+        link(rel="stylesheet", href="/styles/editStyles.css")
+        script(src="/scripts/services.js", defer)
+
+    body
+        include header.pug
+
+        main.container
+            section.services-card.movies-list
+                h2 Available Streaming-Services
+                table
+                    thead
+                        tr
+                            th Name
+                            th Remove
+                    tbody
+                        each service in services
+                            tr
+                                td
+                                    div.service-card
+                                        a(href=`/services/${service.id}`)= service.name
+                                td
+                                    img.remove-service-icon(
+                                        src="/images/remove.svg",
+                                        alt="Remove",
+                                        width="24",
+                                        height="24",
+                                        title="Remove this service",
+                                        data-id=service.id
+                                    )
+                .form-row
+                    button#addService(type="button") Add Service
+                    input#newServiceName(type="text", placeholder="New service name")
+    

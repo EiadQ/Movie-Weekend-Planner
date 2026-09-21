@@ -1,0 +1,13 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title Movie Weekend Planner - Home
+        link(rel='stylesheet', href='/styles/styles.css')
+    body
+        include header.pug
+        main
+            .centered
+                img(src='/images/logo.jpg', alt='Movie Weekend Planner Logo')
+                h2 Welcome#{user ? ' ' + user.username : '!'}
+                p We are your go-to destination for effortless weekend entertainment. Our platform lets you browse, select, and rent movies from your favorite streaming services all in one place. Whether you are planning a cozy movie night for two or a family film marathon, Movie Weekend Planner helps you organize your watchlist, compare prices, and secure rentals with ease.

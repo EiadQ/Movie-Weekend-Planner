@@ -1,0 +1,24 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title Register
+        link(rel='stylesheet', href='/styles/styles.css')
+    body
+        include header.pug
+        main.auth-container
+            section.auth-card
+                h2 Register
+                if errorMessage
+                    p.form-error= errorMessage
+                form(method='post', action='/register')
+                    label(for='username') Username
+                    input#username(type='text', name='username', required, value=formData.username)
+                    label(for='password') Password
+                    input#password(type='password', name='password', required)
+                    label.checkbox-label
+                        input(type='checkbox', name='privacy', checked=formData.privacy)
+                        | Private account
+                    button(type='submit') Register
+                p.helper-text Already have an account?
+                    a(href='/login') Sign in here

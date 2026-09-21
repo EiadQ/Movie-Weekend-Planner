@@ -1,0 +1,38 @@
+{
+    "id": 2,
+    "name": "Movie Verse",
+    "minOrder": 4.50,
+    "serviceFee": 2.25,
+    "genres": {
+        "Action": [
+            { "id": 28, "title": "Blacksite Zero", "description": "A covert mission goes wrong beneath Antarctica.", "price": 5.29, "year": 2025 },
+            { "id": 29, "title": "Midnight Surge", "description": "A hacker targets corrupt corporations under the cover of night.", "price": 4.79, "year": 2024 },
+            { "id": 30, "title": "The Brink Protocol", "description": "An elite task force must stop an AI uprising.", "price": 5.49, "year": 2025 },
+            { "id": 31, "title": "Stormbreaker", "description": "A rogue pilot fights to prevent a weather-control weapon launch.", "price": 4.99, "year": 2024 },
+            { "id": 32, "title": "Iron Cross", "description": "An ex-soldier uncovers a conspiracy in the global arms trade.", "price": 4.29, "year": 2023 }
+        ],
+        "Comedy": [
+            { "id": 33, "title": "The Pranksters", "description": "A group of pranksters take on a billionaire’s security system.", "price": 4.49, "year": 2024 },
+            { "id": 34, "title": "Social Climber", "description": "A small-town influencer accidentally becomes famous worldwide.", "price": 4.79, "year": 2025 },
+            { "id": 35, "title": "Suburban Legends", "description": "Neighbors feud over the title of best Halloween house.", "price": 3.29, "year": 2023 },
+            { "id": 36, "title": "Bloopers Forever", "description": "A failed sitcom gets revived in the strangest way possible.", "price": 3.99, "year": 2024 },
+            { "id": 37, "title": "Parent Trapdoor", "description": "A single dad joins a parenting reality show for the wrong reasons.", "price": 4.99, "year": 2025 },
+            { "id": 38, "title": "Instant Roommates", "description": "A housing app glitch pairs complete opposites together.", "price": 3.79, "year": 2023 }
+        ],
+        "Drama": [
+            { "id": 39, "title": "Crimson Line", "description": "A detective confronts her past in a city divided by corruption.", "price": 4.99, "year": 2024 },
+            { "id": 40, "title": "Falling Leaves", "description": "A widower reopens his late wife’s bookstore.", "price": 3.99, "year": 2023 },
+            { "id": 41, "title": "North of Winter", "description": "Siblings reunite to sell their family cabin, but memories intervene.", "price": 4.79, "year": 2025 },
+            { "id": 42, "title": "Unwritten Pages", "description": "A novelist struggles between truth and fiction.", "price": 4.49, "year": 2024 },
+            { "id": 43, "title": "The River’s Silence", "description": "A fisherman faces an environmental disaster in his hometown.", "price": 3.99, "year": 2023 },
+            { "id": 44, "title": "The Last Candle", "description": "Hope flickers in a small town during a nationwide blackout.", "price": 4.99, "year": 2025 }
+        ],
+        "Romance": [
+            { "id": 45, "title": "Love Algorithm", "description": "An AI matchmaker develops feelings for a user.", "price": 5.29, "year": 2025 },
+            { "id": 46, "title": "Harbor Lights", "description": "Two sailors’ paths cross under the Northern Lights.", "price": 4.49, "year": 2024 },
+            { "id": 47, "title": "Postmarked", "description": "Two pen pals discover they’ve been living next door.", "price": 3.79, "year": 2023 },
+            { "id": 48, "title": "Painted Skies", "description": "An artist and a pilot fall in love through murals and maps.", "price": 4.79, "year": 2024 },
+            { "id": 49, "title": "Moonset Café", "description": "Late-night diners find more than coffee in common.", "price": 3.99, "year": 2023 }
+        ]
+    }
+}

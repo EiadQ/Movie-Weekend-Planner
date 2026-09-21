@@ -1,0 +1,36 @@
+{
+    "id": 4,
+    "name": "CineWorld",
+    "minOrder": 4.29,
+    "serviceFee": 1.99,
+    "genres": {
+        "Action": [
+            { "id": 73, "title": "Quantum Strike", "description": "A secret agent races against time to stop a dimensional weapon.", "price": 5.49, "year": 2025 },
+            { "id": 74, "title": "Steel Horizon", "description": "A pilot must save a city from a rogue drone army.", "price": 4.79, "year": 2024 },
+            { "id": 75, "title": "Shadow Ops", "description": "An elite team battles terrorists across global cities.", "price": 5.29, "year": 2025 },
+            { "id": 76, "title": "Blaze Runner", "description": "A firefighter confronts a criminal arsonist in the heart of the city.", "price": 4.99, "year": 2023 },
+            { "id": 77, "title": "Omega Protocol", "description": "A hacker uncovers a plot that could collapse the world economy.", "price": 4.59, "year": 2024 }
+        ],
+        "Comedy": [
+            { "id": 78, "title": "Office Odyssey", "description": "A team of misfits accidentally launches a company-wide prank war.", "price": 3.99, "year": 2023 },
+            { "id": 79, "title": "Wedding Crashers 2.0", "description": "Tech-savvy friends crash virtual weddings to hilarious effect.", "price": 4.49, "year": 2024 },
+            { "id": 80, "title": "Grandma's Secret", "description": "A grandmother's wild past turns a small town upside down.", "price": 3.79, "year": 2025 },
+            { "id": 81, "title": "Pet Project", "description": "A dog trainer discovers pets are smarter than humans think.", "price": 4.29, "year": 2024 },
+            { "id": 82, "title": "The Great Prank Heist", "description": "College students plan a heist using practical jokes as distractions.", "price": 4.99, "year": 2025 }
+        ],
+        "Drama": [
+            { "id": 83, "title": "Silent Echoes", "description": "A lawyer revisits a controversial case from their youth.", "price": 4.79, "year": 2024 },
+            { "id": 84, "title": "Fading Horizon", "description": "A couple faces the challenges of long-distance life during a pandemic.", "price": 3.99, "year": 2023 },
+            { "id": 85, "title": "Paper Wings", "description": "A young pilot chases dreams while confronting family expectations.", "price": 4.49, "year": 2025 },
+            { "id": 86, "title": "Beneath the Pines", "description": "Old secrets resurface when siblings return to their childhood cabin.", "price": 4.99, "year": 2024 },
+            { "id": 87, "title": "Glass Streets", "description": "A journalist uncovers corruption in the heart of a metropolis.", "price": 4.29, "year": 2023 }
+        ],
+        "Romance": [
+            { "id": 88, "title": "Starlight Café", "description": "Two baristas fall in love under the glow of city lights.", "price": 3.99, "year": 2024 },
+            { "id": 89, "title": "Letters to Tomorrow", "description": "A woman discovers love letters written decades ago and tracks down their author.", "price": 4.49, "year": 2025 },
+            { "id": 90, "title": "Sunset Boulevard Nights", "description": "An actor and a musician meet while chasing their dreams in LA.", "price": 4.79, "year": 2023 },
+            { "id": 91, "title": "Chasing Aurora", "description": "Two travelers meet in the Arctic and fall in love chasing the Northern Lights.", "price": 5.29, "year": 2025 },
+            { "id": 92, "title": "Hidden in Plain Sight", "description": "Neighbors discover love in unexpected places.", "price": 3.79, "year": 2024 }
+        ]
+    }
+}

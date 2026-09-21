@@ -1,0 +1,58 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title #{profileUser.username} - Profile
+        link(rel='stylesheet', href='/styles/styles.css')
+        link(rel='stylesheet', href='/styles/editStyles.css')
+        script.
+            const profileUserId = !{JSON.stringify(profileUser._id)};
+            const isOwnProfile = !{JSON.stringify(profileUser.isOwnProfile)};
+        script(src='/scripts/userProfile.js', defer)
+    body
+        include header.pug
+        main.container
+            section.profile-card
+                h2 User Profile
+                .form-row
+                    label(for='profileUsername') Username:
+                    input#profileUsername(type='text', value=profileUser.username, disabled=!profileUser.isOwnProfile && !user.admin)
+                .form-row
+                    label(for='profilePassword') Password:
+                    input#profilePassword(type='password', value=profileUser.password, disabled=!profileUser.isOwnProfile && !user.admin)
+                .form-row
+                    label(for='confirmPassword') Confirm Password:
+                    input#confirmPassword(type='password', value=profileUser.password, disabled=!profileUser.isOwnProfile && !user.admin)
+                .form-row
+                    label(for='privacyCheckbox') Privacy:
+                    label.checkbox-label
+                        input#privacyCheckbox(type='checkbox', checked=profileUser.privacy, disabled=!profileUser.isOwnProfile && !user.admin)
+                        | Private
+                if profileUser.isOwnProfile || user.admin
+                    button#saveProfile(type='button') Save Changes
+            section.orders-card
+                h2 Past Orders
+                if profileUser.orders.length === 0
+                    p No previous orders.
+                else
+                    each order in profileUser.orders
+                        .order-history-card
+                            h3 Order #{order.id}
+                            p Fees: #{Object.entries(order.fees).map(([name, fee]) => `${name}: $${Number(fee).toFixed(2)}`).join(', ') || 'None'}
+                            p Subtotal: $#{Number(order.subtotal).toFixed(2)}
+                            p Tax: $#{Number(order.tax).toFixed(2)}
+                            p Total: $#{Number(order.total).toFixed(2)}
+                            table
+                                thead
+                                    tr
+                                        th Service
+                                        th ID
+                                        th Title
+                                        th Year
+                                tbody
+                                    each movie in order.movies
+                                        tr
+                                            td= movie.serviceName
+                                            td= movie.id
+                                            td= movie.title
+                                            td= movie.year

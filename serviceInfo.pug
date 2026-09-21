@@ -1,0 +1,94 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title= service.name + " - Details"
+        link(rel="stylesheet", href="/styles/styles.css")
+        link(rel="stylesheet", href="/styles/editStyles.css")
+        script(src="/scripts/serviceInfo.js", defer)
+
+    body
+        include header.pug
+        
+        
+            
+        main.container
+            h1.centered= service.name
+            br
+
+            //- This is a hidden value that we can read from  the JavaScript code to get the service id
+            input#serviceId(type="hidden", value=service.id)
+
+            //- Top row container with same left/right spacing
+            .top-cards
+                .cards-row
+                    section.service-card
+                        h2 Service Info
+                        form#serviceForm
+                            .form-row
+                                label(for="serviceName") Name:
+                                input#serviceName(type="text", value=service.name)
+                            .form-row
+                                label(for="serviceFee") Service Fee:
+                                input#serviceFee(type="number", step="0.01", value=service.serviceFee)
+                            .form-row
+                                label(for="minOrder") Minimum Order:
+                                input#minOrder(type="number", step="0.01", value=service.minOrder)
+                            button(type="submit", id="saveService") Save Changes
+
+
+                    section.add-movie-card
+                        h3 Add Movie
+                        form#addMovie
+                            .form-row
+                                label(for="genreSelect") Genre:
+                                select#genreSelect(style="width: 20%")
+                                    each genreName in Object.keys(service.genres)
+                                        option(value=genreName)= genreName
+                                button#addGenre(type="button") Add Genre
+                                input#newGenre(type="text", placeholder="New genre name", style="margin-left: 10px; flex: 1")
+                            .form-row
+                                label(for="movieTitle") Title:
+                                input#movieTitle(type="text", placeholder="Movie title")
+                            .form-row
+                                label(for="movieDescription") Description:
+                                input#movieDescription(type="text", placeholder="Movie description")
+                            .form-row
+                                label(for="movieYear") Year:
+                                input#movieYear(type="number", placeholder="Year")
+                            .form-row
+                                label(for="moviePrice") Price:
+                                input#moviePrice(type="number", step="0.01", placeholder="Price")
+                            button#addMovie(type="submit") Add Movie
+
+
+            //- Genre Cards with Movies
+            div.movies-list
+                hr
+                br
+                h3.centered Available Movies
+                br
+                hr
+                each genreName in Object.keys(service.genres)
+                    - const movies = service.genres[genreName]
+                    div.movies-genre
+                        h3= genreName
+                        table
+                            thead
+                                tr
+                                    th ID
+                                    th Title
+                                    th Description
+                                    th Year
+                                    th Price
+                                    th Remove
+                            tbody
+                                each movie in movies
+                                    tr
+                                        td= movie.id
+                                        td= movie.title
+                                        td= movie.description
+                                        td= movie.year
+                                        td $#{movie.price.toFixed(2)}
+                                        td 
+                                            img.remove-icon(src="/images/remove.svg", alt="Remove", width="24", height="24", data-id=movie.id, data-genre=genreName, title="Remove this movie")           
