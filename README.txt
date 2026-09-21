@@ -1,5 +1,3 @@
-COMP 2406 Assignment 4 - Movie Weekend Planner
-
 Design notes:
 - MongoDB is used for services, users, orders, and session data.
 - Sessions are stored in the mwp.sessions collection through a custom Mongo session store.
